@@ -37,9 +37,45 @@
             color: #bbb;
         }
 
+        .itch-container {
+            width: 100%;
+            max-width: 560px;   /* itch.io recommended width */
+            margin: 0 auto;
+        }
+
+        .itch-container iframe {
+            width: 100%;
+            height: 167px;     /* default itch.io height */
+            border: 0;
+        }
+
+        /* Slightly taller on small screens */
+        @media (max-width: 560px) {
+            .itch-container iframe {
+                width: 208px;
+            }
+        }
+
         .trailer-section {
             text-align: center;
             margin-bottom: 50px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 960px; /* limits width on desktop */
+            margin: 0 auto; /* centers the video */
+            aspect-ratio: 16 / 9; /* maintains 16:9 ratio */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: 0;
         }
 
         .font-section {
@@ -74,7 +110,6 @@
             background-color: #1e1e1e;
             color: #aaa;
             position: relative;
-            bottom: 0;
             width: 100vw;
         }
 
@@ -130,7 +165,28 @@
             line-height: 1;
         }
 
+        .link-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .icon-group {
+            display: flex;
+            gap: 16px;
+        }
+
+        .link-row,
+        .kofi-wrapper {
+            flex-basis: 100%;
+        }
+
         .speedrun-btn {
+            display: inline-flex;
+            width: auto;
             transition: transform .2s;
         }
 
@@ -141,7 +197,7 @@
         .news-collapse {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease; /* adjust speed */
+            transition: max-height 0.5s ease;
         }
 
         .news-collapse.show {
@@ -200,14 +256,18 @@
     </div>
 
     <div class="download-btn-section" style="text-align: center; margin-bottom: 30px;">
-        <iframe frameborder="0" src="https://itch.io/embed/3065676?bg_color=222&amp;fg_color=ccc&amp;link_color=00f900&amp;border_color=4c4c4c" width="552" height="167"><a href="https://paul8711.itch.io/shadow-dash">Shadow Dash by Paul8711</a></iframe>
+        <div class="itch-container mx-auto">
+            <iframe frameborder="0" src="https://itch.io/embed/3065676?bg_color=222&amp;fg_color=ccc&amp;link_color=00f900&amp;border_color=4c4c4c" loading="lazy" allowfullscreen><a href="https://paul8711.itch.io/shadow-dash">Shadow Dash by Paul8711</a></iframe>
+        </div>
         <p style="color: #bbb; font-size: 1.15rem; margin-top: 15px;">or</p>
         <a href="https://gx.games/games/0ac8nb/shadow-dash-demo-/" target="_blank" class="text-link">Play Demo in browser</a>
     </div>
 
     <div class="trailer-section" id="trailer">
         <h3 style="margin-bottom: 20px;">Trailer</h3>
-        <iframe width="964" height="396" src="https://www.youtube.com/embed/4KrakjvTxp0" title="Shadow Dash Demo trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video-container mx-auto mb-4">
+            <iframe src="https://www.youtube.com/embed/4KrakjvTxp0" title="Shadow Dash Demo trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
 
     <div id="about" class="about-section">
@@ -275,17 +335,25 @@
         <p>The FontStruction <a href="https://www.fontstruct.com/fontstructions/show/112909" target="_blank" class="text-link">“Lubbartz”</a> by “rhinja” is licensed under a <a href="http://creativecommons.org/licenses/by-nd/3.0/" target="_blank" class="text-link">Creative Commons Attribution No Derivatives license</a>.</p>
     </div>
 
-    <div id="links" class="link-section d-flex gap-3 align-items-center px-4">
-        <a href="https://www.speedrun.com/Shadow_Dash" target="_blank" class="speedrun-btn">
-             <img src="speedrun_logo_shadowdash.png" alt="Shadow Dash on Speedrun.com" height="40"> 
-        </a>
-        <a href="https://github.com/Paulprojects8711/Shadow-Dash-Demo-source-code" target="_blank" class="icon-link">
-            <i class="bi bi-github"></i>
-        </a>
-        <a href="https://discord.gg/UhMGSR2Fua" target="_blank" class="icon-link">
-            <i class="bi bi-discord"></i>
-        </a>
-        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#303030', 'U7U61QBY0C');kofiwidget2.draw();</script> 
+    <div id="links" class="link-section px-4">
+        <div class="link-row">
+            <a href="https://www.speedrun.com/Shadow_Dash" target="_blank" class="speedrun-btn">
+                <img src="speedrun_logo_shadowdash.png" alt="Shadow Dash on Speedrun.com" height="40"> 
+            </a>
+        </div>
+
+        <div class="icon-group">
+            <a href="https://github.com/Paulprojects8711/Shadow-Dash-Demo-source-code" target="_blank" class="icon-link">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://discord.gg/UhMGSR2Fua" target="_blank" class="icon-link">
+                <i class="bi bi-discord"></i>
+            </a>
+        </div>
+
+        <div class="kofi-wrapper">
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#303030', 'U7U61QBY0C');kofiwidget2.draw();</script> 
+        </div>
     </div>
 
     <footer class="d-flex justify-content-between align-items-center px-4 py-3" style="background-color: #1e1e1e; color: #aaa;">
