@@ -204,7 +204,18 @@ a.legend-item {
     margin-bottom: 5px;
 }
 
+.legend-item:hover {
+    border-radius: 20px;
+    background-color: #333;
+    transition: background 0.3s;
+}
+
 @media (max-width: 768px) {
+    .info-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     #board {
         display: block;
     }
@@ -212,6 +223,9 @@ a.legend-item {
     .main-list {
         margin-bottom: 20px;
         gap: 5px;
+        padding: 2.5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
 }
 
