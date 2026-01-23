@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi - 40 Pin - Paul8711gamezz</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../../dropdown.css">
+    <script src="../../../search.js" defer></script>
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center px-4 py-3 header">
+        <!-- Back button -->
+        <div>
+            <a href="/pinouts" class="link-navbar">
+                <i class="bi bi-chevron-left" style="font-size: 1.5rem;"></i>
+            </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="header-nav">
+            <ul class="nav-list d-flex gap-3">
+                <li class="nav-item dropdown">
+                    <a style="cursor: pointer;" class="nav-link">Raspberry Pi</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pinouts/device/rpi/40pin">40 Pin</a></li>
+                        <!--<li><a href="/pinouts/device/rpi/26pin">26 Pin</a></li>-->
+                        <!--<li><a href="/pinouts/device/rpi/pico">Pico</a></li>-->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="search-container" style="position: relative; width: 200px;">
+            <input id="device-search" type="text" placeholder="Search device..."
+                style="padding:5px 10px; border-radius:5px; border:none; width: 100%; background: #000000; color: #e0e0e0;">
+            <ul id="search-results" class="search-results"></ul>
+        </div>
+    </header>
+
+    <div class="container main-section py-4">
+        <h1 class="headings">Raspberry Pi (40 Pin)</h1>
+        <div id="board">
+            <ul class="main-list">
+                <li>
+                    <a href="?pin=3v3" class="pin">
+                        <p>3v3 <span class="small">Power</span></p>
+                        <p class="square pin3v3 pin">1</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=5v" class="pin">
+                        <p class="circle pin5v pin">2</p>
+                        <p><span class="small">Power</span> 5v</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=i2c" class="pin">
+                        <p>GPIO2 <span class="small">SDA1 I2C</span></p>
+                        <p class="circle pini2c pin">3</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=5v" class="pin">
+                        <p class="circle pin5v pin">4</p>
+                        <p><span class="small">Power</span> 5v</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=i2c" class="pin">
+                        <p>GPIO3 <span class="small">SCL1 I2C</span></p>
+                        <p class="circle pini2c pin">5</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gnd" class="pin">
+                        <p class="circle pingnd pin">6</p>
+                        <p>Ground</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO4 <span class="small">GPCLK0</span></p>
+                        <p class="circle pingpio pin">7</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=uart" class="pin">
+                        <p class="circle pinuart pin">8</p>
+                        <p><span class="small">UART0 TXD</span> GPIO14</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gnd" class="pin">
+                        <p>Ground</p>
+                        <p class="circle pingnd pin">9</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=uart" class="pin">
+                        <p class="circle pinuart pin">10</p>
+                        <p><span class="small">UART0 RXD</span> GPIO15</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO17</p>
+                        <p class="circle pingpio pin">11</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p class="circle pingpio pin">12</p>
+                        <p><span class="small">PCM CLK</span> GPIO18</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO27</p>
+                        <p class="circle pingpio pin">13</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gnd" class="pin">
+                        <p class="circle pingnd pin">14</p>
+                        <p>Ground</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO22</p>
+                        <p class="circle pingpio pin">15</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p class="circle pingpio pin">16</p>
+                        <p>GPIO23</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=3v3" class="pin">
+                        <p>3v3 <span class="small">Power</span></p>
+                        <p class="circle pin3v3 pin">17</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p class="circle pingpio pin">18</p>
+                        <p>GPIO24</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=spi" class="pin">
+                        <p>GPIO10 <span class="small">SPI0 MOSI</span></p>
+                        <p class="circle pinspi pin">19</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gnd" class="pin">
+                        <p class="circle pingnd pin">20</p>
+                        <p>Ground</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=spi" class="pin">
+                        <p>GPIO9 <span class="small">SPI0 MISO</span></p>
+                        <p class="circle pinspi pin">21</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p class="circle pingpio pin">22</p>
+                        <p>GPIO25</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=spi" class="pin">
+                        <p>GPIO11 <span class="small">SPI0 SCLK</span></p>
+                        <p class="circle pinspi pin">23</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=spi" class="pin">
+                        <p class="circle pinspi pin">24</p>
+                        <p><span class="small">SPI0 CE0</span> GPIO8</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gnd" class="pin">
+                        <p>Ground</p>
+                        <p class="circle pingnd pin">25</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=spi" class="pin">
+                        <p class="circle pinspi pin">26</p>
+                        <p><span class="small">SPI0 CE1</span> GPIO7</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=i2c" class="pin">
+                        <p>GPIO0 <span class="small">EEPROM SDA</span></p>
+                        <p class="circle pini2c pin">27</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=i2c" class="pin">
+                        <p class="circle pini2c pin">28</p>
+                        <p><span class="small">EEPROM SCL</span> GPIO1</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO5</p>
+                        <p class="circle pingpio pin">29</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gnd" class="pin">
+                        <p class="circle pingnd pin">30</p>
+                        <p>Ground</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO6</p>
+                        <p class="circle pingpio pin">31</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p class="circle pingpio pin">32</p>
+                        <p><span class="small">PWM0</span> GPIO12</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO13 <span class="small">PWM1</span></p>
+                        <p class="circle pingpio pin">33</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gnd" class="pin">
+                        <p class="circle pingnd pin">34</p>
+                        <p>Ground</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO19 <span class="small">PCM FS</span></p>
+                        <p class="circle pingpio pin">35</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p class="circle pingpio pin">36</p>
+                        <p>GPIO16</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p>GPIO26</p>
+                        <p class="circle pingpio pin">37</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p class="circle pingpio pin">38</p>
+                        <p><span class="small">DIN</span> GPIO20</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gnd" class="pin">
+                        <p>Ground</p>
+                        <p class="circle pingnd pin">39</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?pin=gpio" class="pin">
+                        <p class="circle pingpio pin">40</p>
+                        <p><span class="small">DOUT</span> GPIO21</p>
+                    </a>
+                </li>
+            </ul>
+            <div>
+                <p class="text">Raspberry Pis with 40 Pins:<br>Raspberry Pi 5<br>Raspberry Pi 4 Model B<br>Raspberry Pi
+                    3 Model B &amp; B+<br>Raspberry Pi 2 Model B<br>Raspberry Pi 1 Model A+ &amp; B+<br>Raspberry Pi
+                    Zero &amp; Zero W / Zero 2 W</p>
+                <p class="text">Orientate your device so the pin header is on the right</p>
+                <div class="legend">
+                    <a href="?pin=gpio" class="legend-item">
+                        <p class="circle pingpio"></p>
+                        <p class="text" style="margin-bottom: 0;">GPIO <span class="small">General Purpose IO</span></p>
+                    </a>
+                    <a href="?pin=spi" class="legend-item">
+                        <p class="circle pinspi"></p>
+                        <p class="text" style="margin-bottom: 0;">SPI <span class="small">Serial Peripheral
+                                Interface</span></p>
+                    </a>
+                    <a href="?pin=i2c" class="legend-item">
+                        <p class="circle pini2c"></p>
+                        <p class="text" style="margin-bottom: 0;">I&sup2;C <span class="small">Inter-integrated
+                                Circuit</span></p>
+                    </a>
+                    <a href="?pin=uart" class="legend-item">
+                        <p class="circle pinuart"></p>
+                        <p class="text" style="margin-bottom: 0;">UART <span class="small">Universal Asynchronous
+                                Receiver/Transmitter</span></p>
+                    </a>
+                    <a href="?pin=gnd" class="legend-item">
+                        <p class="circle pingnd"></p>
+                        <p class="text" style="margin-bottom: 0;">Ground</p>
+                    </a>
+                    <a href="?pin=5v" class="legend-item">
+                        <p class="circle pin5v"></p>
+                        <p class="text" style="margin-bottom: 0;">5v <span class="small">Power</span></p>
+                    </a>
+                    <a href="?pin=3v3" class="legend-item">
+                        <p class="circle pin3v3"></p>
+                        <p class="text" style="margin-bottom: 0;">3v3 <span class="small">Power</span></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p class="text" style="margin-top: 20px;">Contribute by <a href="mailto:support@paul8711gamezz.org"
+                target="_blank" class="text-link">requesting a device</a>.</p>
+    </div>
+
+    <div class="kofi-link d-flex gap-3 align-items-center px-4">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script
+            type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#303030', 'U7U61QBY0C'); kofiwidget2.draw();</script>
+    </div>
+
+    <footer class="d-flex justify-content-between align-items-center px-4 py-3"
+        style="background-color: #1e1e1e; color: #aaa;">
+        <div>
+            &copy; 2025 Paul8711gamezz
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <a href="mailto:support@paul8711gamezz.org" target="_blank" style="color: #e0e0e0; font-size: 1.3rem;">
+                <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://github.com/Paulprojects8711" target="_blank" style="color: #e0e0e0; font-size: 1.3rem;">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.youtube.com/@Paul8711gamezz" target="_blank"
+                style="color: #e0e0e0; font-size: 1.3rem;">
+                <i class="bi bi-youtube"></i>
+            </a>
+        </div>
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const pin = params.get("pin");
+
+        if (pin) {
+            const className = "pin" + pin.toLowerCase();
+
+            document.querySelectorAll("p." + className).forEach(p => {
+                const a = p.closest("a");
+                if (a) a.style.backgroundColor = "#333";
+            });
+        }
+    </script>
+</body>
+
+</html>

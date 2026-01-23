@@ -1,0 +1,237 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding-top: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-section h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.itch-container {
+    width: 100%;
+    max-width: 560px;
+    /* itch.io recommended width */
+    margin: 0 auto;
+}
+
+.itch-container iframe {
+    width: 100%;
+    height: 167px;
+    /* default itch.io height */
+    border: 0;
+}
+
+/* Slightly taller on small screens */
+@media (max-width: 560px) {
+    .itch-container iframe {
+        width: 208px;
+    }
+}
+
+.trailer-section {
+    text-align: center;
+    margin-bottom: 50px;
+    scroll-margin-top: 80px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    /* limits width on desktop */
+    margin: 0 auto;
+    /* centers the video */
+    aspect-ratio: 16 / 9;
+    /* maintains 16:9 ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+.font-section {
+    text-align: center;
+    margin-bottom: 50px;
+    scroll-margin-top: 80px;
+}
+
+.font-section p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.about-section {
+    text-align: center;
+    margin-bottom: 50px;
+    scroll-margin-top: 80px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.link-section {
+    flex-direction: row;
+    margin-bottom: 10px;
+    scroll-margin-top: 80px;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #aaa;
+    position: relative;
+    width: 100vw;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #aaa;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.link-navbar:hover {
+    color: #ccc;
+}
+
+.text-link {
+    position: relative;
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.text-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #00bfff;
+    transition: width 0.3s;
+}
+
+.text-link:hover::after {
+    width: 100%;
+}
+
+.icon-link {
+    color: #e0e0e0;
+    font-size: 2.0rem;
+}
+
+.icon-link:hover {
+    color: #fff;
+}
+
+.link-section a i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.link-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.icon-group {
+    display: flex;
+    gap: 16px;
+}
+
+.link-row,
+.kofi-wrapper {
+    flex-basis: 100%;
+}
+
+.speedrun-btn {
+    display: inline-flex;
+    width: auto;
+    transition: transform .2s;
+}
+
+.speedrun-btn:hover {
+    transform: scale(1.05);
+}
+
+.news-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.news-collapse.show {
+    max-height: 1000px;
+    /* comfortably larger than content */
+}
+
+#news-arrow {
+    display: inline-block;
+    /* needed for rotation */
+    transition: transform 0.5s ease;
+    vertical-align: middle;
+    /* align with text */
+}
+
+#news-toggle.active #news-arrow {
+    transform: rotate(180deg);
+}
+
+#news h3 {
+    text-align: center;
+    /* center the heading */
+}
+
+#news-content {
+    text-align: center;
+    /* center the content inside */
+}
+
+#news-content ul {
+    list-style-position: inside;
+    /* bullets stay with text */
+    padding-left: 0;
+    /* remove default padding */
+    display: inline-block;
+    /* make the list shrink to content */
+    text-align: left;
+    /* keep bullets left-aligned inside the block */
+    color: #bbb;
+    font-size: 1.2rem;
+}

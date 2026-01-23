@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,235 +10,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            padding-top: 60px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .header-section {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .header-section h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .header-section p {
-            font-size: 1.2rem;
-            color: #bbb;
-        }
-
-        .itch-container {
-            width: 100%;
-            max-width: 560px;   /* itch.io recommended width */
-            margin: 0 auto;
-        }
-
-        .itch-container iframe {
-            width: 100%;
-            height: 167px;     /* default itch.io height */
-            border: 0;
-        }
-
-        /* Slightly taller on small screens */
-        @media (max-width: 560px) {
-            .itch-container iframe {
-                width: 208px;
-            }
-        }
-
-        .trailer-section {
-            text-align: center;
-            margin-bottom: 50px;
-            scroll-margin-top: 80px;
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 960px; /* limits width on desktop */
-            margin: 0 auto; /* centers the video */
-            aspect-ratio: 16 / 9; /* maintains 16:9 ratio */
-        }
-
-        .video-container iframe {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            border: 0;
-        }
-
-        .font-section {
-            text-align: center;
-            margin-bottom: 50px;
-            scroll-margin-top: 80px;
-        }
-
-        .font-section p {
-            font-size: 1.2rem;
-            color: #bbb;
-        }
-
-        .about-section {
-            text-align: center;
-            margin-bottom: 50px;
-            scroll-margin-top: 80px;
-        }
-
-        .about-section p {
-            font-size: 1.2rem;
-            color: #bbb;
-        }
-
-        .link-section {
-            flex-direction: row;
-            margin-bottom: 10px;
-            scroll-margin-top: 80px;
-            justify-content: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-            color: #aaa;
-            position: relative;
-            width: 100vw;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-            color: #aaa;
-            position: fixed;
-            top: 0;
-            width: 100vw;
-            z-index: 1000;
-        }
-
-        .link-navbar:hover {
-            color: #ccc;
-        }
-
-        .text-link {
-            position: relative;
-            color: #00bfff;
-            text-decoration: none;
-        }
-
-        .text-link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 0;
-            height: 2px;
-            background-color: #00bfff;
-            transition: width 0.3s;
-        }
-
-        .text-link:hover::after {
-            width: 100%;
-        }
-
-        .icon-link {
-            color: #e0e0e0;
-            font-size: 2.0rem;
-        }
-
-        .icon-link:hover {
-            color: #fff;
-        }
-
-        .link-section a i {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
-        }
-
-        .link-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            text-align: center;
-        }
-
-        .icon-group {
-            display: flex;
-            gap: 16px;
-        }
-
-        .link-row,
-        .kofi-wrapper {
-            flex-basis: 100%;
-        }
-
-        .speedrun-btn {
-            display: inline-flex;
-            width: auto;
-            transition: transform .2s;
-        }
-
-        .speedrun-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .news-collapse {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-        }
-
-        .news-collapse.show {
-            max-height: 1000px; /* comfortably larger than content */
-        }
-
-        #news-arrow {
-            display: inline-block;      /* needed for rotation */
-            transition: transform 0.5s ease;
-            vertical-align: middle;     /* align with text */
-        }
-
-        #news-toggle.active #news-arrow {
-            transform: rotate(180deg);
-        }
-
-        #news h3 {
-            text-align: center; /* center the heading */
-        }
-
-        #news-content {
-            text-align: center; /* center the content inside */
-        }
-
-        #news-content ul {
-            list-style-position: inside; /* bullets stay with text */
-            padding-left: 0;             /* remove default padding */
-            display: inline-block;       /* make the list shrink to content */
-            text-align: left;            /* keep bullets left-aligned inside the block */
-            color: #bbb;
-            font-size: 1.2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header class="d-flex justify-content-between align-items-center px-4 py-3" style="background-color: #1e1e1e; color: #aaa;">
+    <header class="d-flex justify-content-between align-items-center px-4 py-3"
+        style="background-color: #1e1e1e; color: #aaa;">
         <!--Back btn-->
         <div>
             <a href="/projects" style="font-size: 1.5rem;" class="link-navbar">
@@ -246,14 +24,14 @@
         </div>
 
         <div class="d-flex align-items-center gap-3 links">
-                <a class="active link-navbar" href="#trailer">Trailer</a>
-                <a class="active link-navbar" href="#about">About</a>
-                <a class="active link-navbar" href="#news">News</a>
-                <a class="active link-navbar" href="#font">Font</a>
-                <a class="active link-navbar" href="#links">Links</a>
+            <a class="active link-navbar" href="#trailer">Trailer</a>
+            <a class="active link-navbar" href="#about">About</a>
+            <a class="active link-navbar" href="#news">News</a>
+            <a class="active link-navbar" href="#font">Font</a>
+            <a class="active link-navbar" href="#links">Links</a>
         </div>
     </header>
-    
+
     <div class="container header-section py-4">
         <h1>Shadow Dash</h1>
         <p>Dash, jump, and speedrun through every level</p>
@@ -261,22 +39,29 @@
 
     <div class="download-btn-section" style="text-align: center; margin-bottom: 30px;">
         <div class="itch-container mx-auto">
-            <iframe frameborder="0" src="https://itch.io/embed/3065676?bg_color=222&amp;fg_color=ccc&amp;link_color=00f900&amp;border_color=4c4c4c" loading="lazy" allowfullscreen><a href="https://paul8711.itch.io/shadow-dash">Shadow Dash by Paul8711</a></iframe>
+            <iframe frameborder="0"
+                src="https://itch.io/embed/3065676?bg_color=222&amp;fg_color=ccc&amp;link_color=00f900&amp;border_color=4c4c4c"
+                loading="lazy" allowfullscreen><a href="https://paul8711.itch.io/shadow-dash">Shadow Dash by
+                    Paul8711</a></iframe>
         </div>
         <p style="color: #bbb; font-size: 1.15rem; margin-top: 15px;">or</p>
-        <a href="https://gx.games/games/0ac8nb/shadow-dash-demo-/" target="_blank" class="text-link">Play Demo in browser</a>
+        <a href="https://gx.games/games/0ac8nb/shadow-dash-demo-/" target="_blank" class="text-link">Play Demo in
+            browser</a>
     </div>
 
     <div class="trailer-section" id="trailer">
         <h3 style="margin-bottom: 20px;">Trailer</h3>
         <div class="video-container mx-auto mb-4">
-            <iframe src="https://www.youtube.com/embed/Ww1IMPkJ7Bc" title="Shadow Dash trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Ww1IMPkJ7Bc" title="Shadow Dash trailer" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 
     <div id="about" class="about-section">
         <h3>About</h3>
-        <p>Shadow Dash is a 2D platformer where you can dash, jump, and race through 20 levels in Normal Mode — or try Challenge Mode for a slightly harder experience.</p>
+        <p>Shadow Dash is a 2D platformer where you can dash, jump, and race through 20 levels in Normal Mode — or try
+            Challenge Mode for a slightly harder experience.</p>
     </div>
 
     <div id="news" class="mb-5" style="scroll-margin-top: 80px;">
@@ -340,18 +125,22 @@
 
     <div id="font" class="font-section">
         <h3>Font</h3>
-        <p>The FontStruction <a href="https://www.fontstruct.com/fontstructions/show/112909" target="_blank" class="text-link">“Lubbartz”</a> by “rhinja” is licensed under a <a href="http://creativecommons.org/licenses/by-nd/3.0/" target="_blank" class="text-link">Creative Commons Attribution No Derivatives license</a>.</p>
+        <p>The FontStruction <a href="https://www.fontstruct.com/fontstructions/show/112909" target="_blank"
+                class="text-link">“Lubbartz”</a> by “rhinja” is licensed under a <a
+                href="http://creativecommons.org/licenses/by-nd/3.0/" target="_blank" class="text-link">Creative Commons
+                Attribution No Derivatives license</a>.</p>
     </div>
 
     <div id="links" class="link-section px-4">
         <div class="link-row">
             <a href="https://www.speedrun.com/Shadow_Dash" target="_blank" class="speedrun-btn">
-                <img src="speedrun_logo_shadowdash.png" alt="Shadow Dash on Speedrun.com" height="40"> 
+                <img src="speedrun_logo_shadowdash.png" alt="Shadow Dash on Speedrun.com" height="40">
             </a>
         </div>
 
         <div class="icon-group">
-            <a href="https://github.com/Paulprojects8711/Shadow-Dash-Demo-source-code" target="_blank" class="icon-link">
+            <a href="https://github.com/Paulprojects8711/Shadow-Dash-Demo-source-code" target="_blank"
+                class="icon-link">
                 <i class="bi bi-github"></i>
             </a>
             <a href="https://discord.gg/UhMGSR2Fua" target="_blank" class="icon-link">
@@ -360,11 +149,14 @@
         </div>
 
         <div class="kofi-wrapper">
-            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#303030', 'U7U61QBY0C');kofiwidget2.draw();</script> 
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+            <script
+                type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#303030', 'U7U61QBY0C'); kofiwidget2.draw();</script>
         </div>
     </div>
 
-    <footer class="d-flex justify-content-between align-items-center px-4 py-3" style="background-color: #1e1e1e; color: #aaa;">
+    <footer class="d-flex justify-content-between align-items-center px-4 py-3"
+        style="background-color: #1e1e1e; color: #aaa;">
         <div>
             &copy; 2025 Paul8711gamezz
         </div>
@@ -376,7 +168,8 @@
             <a href="https://github.com/Paulprojects8711" target="_blank" style="color: #e0e0e0; font-size: 1.3rem;">
                 <i class="bi bi-github"></i>
             </a>
-            <a href="https://www.youtube.com/@Paul8711gamezz" target="_blank" style="color: #e0e0e0; font-size: 1.3rem;">
+            <a href="https://www.youtube.com/@Paul8711gamezz" target="_blank"
+                style="color: #e0e0e0; font-size: 1.3rem;">
                 <i class="bi bi-youtube"></i>
             </a>
         </div>
@@ -384,13 +177,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script>
-const newsToggle = document.getElementById('news-toggle');
-const newsContent = document.getElementById('news-content');
+    const newsToggle = document.getElementById('news-toggle');
+    const newsContent = document.getElementById('news-content');
 
-newsToggle.addEventListener('click', (e) => {
-  e.preventDefault();
-  newsToggle.classList.toggle('active');
-  newsContent.classList.toggle('show');
-});
+    newsToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        newsToggle.classList.toggle('active');
+        newsContent.classList.toggle('show');
+    });
 </script>
+
 </html>
