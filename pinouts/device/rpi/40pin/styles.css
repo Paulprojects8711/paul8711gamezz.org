@@ -158,17 +158,17 @@ header {
     gap: 5px;
 }
 
-#board ul li a p {
+.main-list li a p {
     margin-left: 10px;
     margin-right: 10px;
 }
 
-#board ul li a {
+.main-list li a {
     padding: 1px;
     border-radius: 20px;
 }
 
-#board ul li a:hover {
+.main-list li a:hover {
     border-radius: 20px;
     background-color: #333;
     transition: background 0.3s;
@@ -226,6 +226,11 @@ a.legend-item {
         padding: 2.5px;
         padding-bottom: 5px;
         padding-top: 5px;
+    }
+
+    .main-list li a {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
