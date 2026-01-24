@@ -2,9 +2,15 @@ const searchData = [
     {
         name: "Raspberry Pi 40 Pin",
         link: "/pinouts/device/rpi/40pin",
-        aliases: ["rpi", "pi 5", "pi5", "pi 4", "pi4", "pi 3", "pi3", "pi 2", "pi2", "pi1", "pi 1", "zero", "zero w", "zero 2w", "zero 2 w"],
+        aliases: ["rpi", "pi 5", "pi5", "pi 4", "pi4", "pi 3", "pi3", "pi 2", "pi2", "zero", "zero w", "zero 2w", "zero 2 w"],
         tags: ["gpio", "spi", "i2c", "uart", "gnd", "ground", "5v", "3v3", "pwm", "arm"]
     },
+    {
+        name: "Raspberry Pi 26 Pin",
+        link: "/pinouts/device/rpi/26pin",
+        aliases: ["rpi", "pi 1", "pi1"],
+        tags: ["gpio", "spi", "i2c", "uart", "gnd", "ground", "5v", "3v3", "pwm", "arm"]
+    }
 ];
 
 const input = document.getElementById("device-search");
