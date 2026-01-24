@@ -25,20 +25,15 @@
             </a>
         </div>
 
-        <!-- Navigation -->
-        <nav class="header-nav">
-            <ul class="nav-list d-flex gap-3">
-                <li class="nav-item dropdown">
-                    <a style="cursor: pointer;" class="nav-link">Raspberry Pi</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/pinouts/device/rpi/40pin">40 Pin</a></li>
-                        <!--<li><a href="/pinouts/device/rpi/26pin">26 Pin</a></li>-->
-                        <!--<li><a href="/pinouts/device/rpi/pico">Pico</a></li>-->
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div id="nav-container"></div>
 
+        <script>
+            fetch('/pinouts/nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-container').innerHTML = data;
+                });
+        </script>
 
         <div class="search-container" style="position: relative; width: 200px;">
             <input id="device-search" type="text" placeholder="Search device..."
