@@ -197,7 +197,7 @@ header {
 }
 
 .news-collapse.show {
-    max-height: 1000px;
+    max-height: none;
     /* comfortably larger than content */
 }
 
