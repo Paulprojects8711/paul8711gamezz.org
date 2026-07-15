@@ -1,0 +1,29 @@
+{
+  "name": "test.paul8711.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paul8711-code/test.paul8711.com.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/paul8711-code/test.paul8711.com/issues"
+  },
+  "homepage": "https://github.com/paul8711-code/test.paul8711.com#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "astro": "^7.0.7",
+    "tailwindcss": "^4.3.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.20"
+  }
+}

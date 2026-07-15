@@ -1,0 +1,20 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="Paul8711" desc="Explore games and other software by Paul8711. Discover open-source tools and software made in Rust." favicon="/favicon.png">
+    <main class="min-h-dvh pt-15 pb-32 bg-black bg-linear-120 from-[#00312e] via-transparent to-[#002b00]">
+        <div class="text-center mb-12.5">
+            <h1 class="text-white text-5xl mb-3.75 font-medium">Paul8711</h1>
+            <p class="text-neutral-400 text-xl">I create games and other software</p>
+        </div>
+        <h2 class="text-center text-white font-medium text-3xl mb-6">Explore</h2>
+        <div class="grid md:grid-cols-3 gap-5 m-5">
+            <Card title="Projects" body="My Games and Software" link="/projects" />
+            <Card title="About" body="General information about me" link="/about" />
+        </div>
+        <Footer />
+    </main>
+</Layout>

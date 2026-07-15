@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+import Back from "../components/Back.astro";
+const { title, link } = Astro.props;
+---
+<header class="fixed z-100 top-4 left-4 right-4 px-6 py-2 bg-black/25 border-2 border-white/20 rounded-full backdrop-blur-md grid grid-cols-2 md:grid-cols-3 items-center">
+    <div class="hidden md:flex items-center">
+        <Back link={link} />
+    </div>
+
+    <div class="md:flex md:justify-self-center">
+        <a href="/" class="text-white text-2xl font-medium">{title}</a>
+    </div>
+
+    <div class="justify-self-end flex items-center gap-10">
+        <a href="/projects" class="text-neutral-300 hover:text-neutral-400 text-lg">
+            Projects
+        </a>
+        <a href="/about" class="text-neutral-300 hover:text-neutral-400 text-lg">About</a>
+    </div>
+</header>

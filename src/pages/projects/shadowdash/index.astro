@@ -1,0 +1,115 @@
+---
+import "../../../styles/global.css";
+import Footer from "../../../components/Footer.astro";
+import Bar from "../../../components/Bar.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import shadowDash1 from "./shadow_dash1.png";
+import shadowDash2 from "./shadow_dash2.png";
+import shadowDash3 from "./shadow_dash3.png";
+import shadowDash4 from "./shadow_dash4.png";
+import shadowDash5 from "./shadow_dash5.png";
+---
+<Layout title="Shadow Dash - Paul8711" desc="Learn more about Shadow Dash, a 2D platformer where you dash, jump, and race through levels by Paul8711." favicon="/projects/shadowdash/favicon.png">
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url(/projects/shadowdash/bg.png)] bg-cover bg-center blur-lg brightness-50 scale-110">
+        </div>
+    </div>
+
+    <main class="min-h-dvh pt-15 pb-32">
+        <Bar title="Shadow Dash" link="/projects" />
+        <div class="mt-10">
+            <p class="text-neutral-300 text-xl text-center mb-12.5">Dash, jump, and speedrun through every level</p>
+
+            <div class="mb-7.5 w-full max-w-140 mx-auto">
+                <iframe class="block w-48 md:w-full mx-auto"
+                    title="Buy Shadow Dash by Paul8711"
+                    frameborder="0"
+                    src="https://itch.io/embed/3065676?bg_color=222&amp;fg_color=ccc&amp;link_color=00f900&amp;border_color=4c4c4c"
+                    loading="eager" allowfullscreen><a href="https://paul8711.itch.io/shadow-dash">Shadow Dash by
+                        Paul8711</a></iframe>
+            </div>
+
+            <h1 class="mb-5 text-center text-white font-medium text-2xl">Trailer</h1>
+            <div class="w-full max-w-240 aspect-video mx-auto mb-4">
+                <iframe class="w-full h-full border-0"
+                    src="https://www.youtube.com/embed/Ww1IMPkJ7Bc" title="Shadow Dash trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <h1 class="mb-2.5 text-center text-white font-medium text-2xl">Images</h1>
+            <div class="mb-5 max-w-250 relative m-auto mt-5 aspect-video overflow-hidden">
+                <Image src={shadowDash1} alt="" class="w-full block image" />
+                <Image src={shadowDash2} alt="" class="w-full block image" />
+                <Image src={shadowDash3} alt="" class="w-full block image" />
+                <Image src={shadowDash4} alt="" class="w-full block image" />
+                <Image src={shadowDash5} alt="" class="w-full block image" />
+                <a id="prev" class="left-0 cursor-pointer absolute top-[50%] w-auto -mt-5.5 p-4 text-white font-bold font-lg select-none transition-all duration-300 ease hover:bg-neutral-700">❮</a>
+                <a id="next" class="right-0 cursor-pointer absolute top-[50%] w-auto -mt-5.5 p-4 text-white font-bold font-lg select-none transition-all duration-300 ease hover:bg-neutral-700">❯</a>
+            </div>
+
+            <h1 class="mb-2.5 text-center text-white font-medium text-2xl">About</h1>
+            <p class="mx-10 mb-5 text-center text-neutral-300 text-xl">Shadow Dash is a 2D platformer where you can dash, jump, and race through 25 levels in Normal Mode — or try Challenge Mode for a slightly harder experience.</p>
+
+            <h1 class="mb-2.5 text-center text-white font-medium text-2xl">Font</h1>
+            <p class="mx-10 mb-5 text-center text-neutral-300 text-xl">The FontStruction <a href="https://www.fontstruct.com/fontstructions/show/112909" target="_blank" class="link">“Lubbartz”</a> by “rhinja” is licensed under a <a href="http://creativecommons.org/licenses/by-nd/3.0/" target="_blank" class="link">Creative Commons
+                Attribution No Derivatives license</a>.</p>
+
+            <div class="flex flex-row mb-2.5 flex-wrap justify-center items-center gap-4 text-center">
+                <a class="inline-flex w-auto transition-all duration-200 h-10 hover:transform-[scale(1.05)] focus:transform-[scale(1.05)]" href="https://www.speedrun.com/Shadow_Dash" target="_blank">
+                    <img class="rounded-full" src="/projects/shadowdash/speedrun_logo_shadowdash.png" alt="Shadow Dash on Speedrun.com" loading="lazy">
+                </a>
+
+                <div class="flex gap-4">
+                    <a href="https://github.com/paul8711-code/Shadow-Dash-Demo-source-code" target="_blank" class="text-neutral-300 hover:text-neutral-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                            <title>Github</title>
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+                        </svg>
+                    </a>
+                    <a href="https://discord.gg/UhMGSR2Fua" target="_blank" class="text-neutral-300 hover:text-neutral-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                            <title>Discord</title>
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.1.1 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.1 16.1 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02M8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12m6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="basis-full">
+                    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+                    <script
+                    type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#303030', 'U7U61QBY0C'); kofiwidget2.draw();</script>
+                </div>
+            </div>
+        </div>
+        <Footer />
+    </main>
+    <script>
+    let slideIndex = 0;
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("image");
+        if (n > slides.length - 1) { slideIndex = 0 }
+        if (n < 0) { slideIndex = slides.length - 1 }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+
+    document.querySelector("#prev")?.addEventListener("click", () => {
+        showSlides(slideIndex -= 1);
+    });
+
+    document.querySelector("#next")?.addEventListener("click", () => {
+        showSlides(slideIndex += 1);
+    });
+
+    showSlides(slideIndex);
+    </script>
+</Layout>

@@ -1,0 +1,22 @@
+---
+import "../../styles/global.css";
+import Footer from "../../components/Footer.astro";
+import Bar from "../../components/Bar.astro";
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+<Layout title="Projects - Paul8711" desc="Explore all projects by Paul8711 in this overview. Browse the collection of software, open-source tools and games." favicon="/favicon.png">
+    <main class="min-h-dvh bg-black bg-linear-120 from-[#00312e] via-transparent to-[#002b00] pt-15 pb-32">
+        <Bar title="Projects" link="/" />
+        <div class="mt-10">
+            <p class="text-neutral-300 text-xl text-center mb-12.5">My games and software</p>
+            <div class="grid md:grid-cols-3 gap-5 m-5">
+                <Card title="Shadow Dash" body="A 2D platformer game where you dash and jump through levels" link="/projects/shadowdash" />
+                <Card title="GUI-Chatroom" body="An end-to-end encrypted Graphical User Interface Chatroom" link="https://github.com/paul8711-code/GUI-Chatroom" />
+                <Card title="meteorite" body="Fast, Secure & Easy-to-use Matrix client in Rust" link="/projects/meteorite" />
+                <Card title="ion-mail" body="Mail CLI in Rust supporting all mail functions & OAuth2 login" link="/projects/ion-mail" />
+            </div>
+        </div>
+        <Footer />
+    </main>
+</Layout>

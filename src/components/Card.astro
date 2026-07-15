@@ -1,0 +1,14 @@
+---
+import "../styles/global.css";
+const { title, body, link } = Astro.props;
+---
+<a
+    href={link}
+    class="block p-4 bg-black/25 border-2 border-white/20 rounded-4xl backdrop-blur-md text-center
+    transition-all duration-300 ease-out
+    hover:shadow-lg hover:border-white/50 hover:shadow-neutral-600 hover:-translate-y-1 hover:bg-white/5
+    focus:shadow-lg focus:border-white/50 focus:shadow-neutral-600 focus:-translate-y-1 focus:bg-white/5"
+>
+    <h1 class="text-white font-medium text-xl">{title}</h1>
+    <p class="text-neutral-400 text-lg">{body}</p>
+</a>

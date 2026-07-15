@@ -1,0 +1,19 @@
+---
+import "../../../../styles/global.css";
+import Footer from "../../../../components/Footer.astro";
+import Bar from "../../../../components/Bar.astro";
+import Card from "../../../../components/Card.astro";
+import Layout from "../../../../layouts/Layout.astro";
+---
+<Layout title="ion-mail Wiki - Paul8711" desc="Learn more about ion-mail in the wiki. Find out how to use the CLI or how to set up OAuth 2.0 with your email provider." favicon="/favicon.png">
+    <main class="min-h-dvh bg-black bg-linear-120 from-[#00312e] via-transparent to-[#002b00] pt-15 pb-32">
+        <Bar title="ion-mail Wiki" link="/projects/ion-mail" />
+        <div class="mt-10">
+            <div class="grid md:grid-cols-3 gap-5 m-5">
+                <Card title="CLI Usage" body="Learn how to use the ion-mail CLI" link="/projects/ion-mail/wiki/cli-usage" />
+                <Card title="Add an account with OAuth 2.0" body="Set up OAuth 2.0 for a new account with your email provider" link="/projects/ion-mail/wiki/setup-oauth2-account" />
+            </div>
+        </div>
+        <Footer />
+    </main>
+</Layout>
