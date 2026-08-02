@@ -20,7 +20,7 @@
   "homepage": "https://github.com/paul8711-code/paul8711.com#readme",
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
-    "astro": "^7.0.7",
+    "astro": "^7.1.6",
     "tailwindcss": "^4.3.2"
   },
   "devDependencies": {
