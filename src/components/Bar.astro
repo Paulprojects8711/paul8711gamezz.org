@@ -8,8 +8,8 @@ const { title, link } = Astro.props;
         <Back link={link} />
     </div>
 
-    <div class="md:flex md:justify-self-center">
-        <a href="/" class="text-white text-2xl font-medium">{title}</a>
+    <div class="md:flex md:justify-self-center min-w-0">
+        <a href="/" class="block truncate text-white text-2xl font-medium pr-4 md:pr-0">{title}</a>
     </div>
 
     <div class="justify-self-end flex items-center gap-10">

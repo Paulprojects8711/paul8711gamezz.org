@@ -1,0 +1,41 @@
+---
+import "../../../../styles/global.css";
+import Footer from "../../../../components/Footer.astro";
+import Bar from "../../../../components/Bar.astro";
+import Entry from "../../../../components/Entry.astro";
+import Layout from "../../../../layouts/Layout.astro";
+---
+<Layout title="This Week In meteorite - Paul8711" desc="Check out meteorite, a fast, secure and easy-to-use Matrix client written in Rust." favicon="/projects/meteorite/favicon.png">
+    <main class="min-h-dvh bg-black bg-linear-120 from-[#00312e] via-transparent to-[#002b00] pt-15 pb-32">
+        <Bar title="This Week In meteorite" link="/projects/meteorite" />
+        <div class="mt-10 p-4">
+            <!-- TODO: add search bar, method to filter by date -->
+            <Entry title="Mobile checks, Android keyring and more - TWIm #1" date="2026-08-09">
+                <p class="text-neutral-300 text-md mb-2">This week, I’m planning to focus on improving meteorite's mobile support and cleaning up some of the login code.</p>
+
+                <h1 class="text-neutral-200 text-3xl mb-2">Mobile checks</h1>
+                <p class="text-neutral-300 text-md mb-2">First, I want to add my Rust checks to both Android and iOS. The goal is to make sure Meteorite continues to compile on mobile as development continues, before I start adding more mobile-specific functionality.</p>
+
+                <p class="text-neutral-300 text-md mb-2">There were already a few changes needed to make this possible. For example, I switched to a different crate for resolving the save path, since the one I was using previously doesn't support Android.</p>
+
+                <h1 class="text-neutral-200 text-3xl mb-2">Android keyring</h1>
+
+                <p class="text-neutral-300 text-md mb-2">The mobile checks also depend on a missing piece of meteorite's Android support: there currently isn't an Android keyring implementation.</p>
+
+                <p class="text-neutral-300 text-md mb-2">So, I’m planning to work on adding native Android keyring support this week as well.</p>
+
+                <h1 class="text-neutral-200 text-3xl mb-2">Login cleanup</h1>
+
+                <p class="text-neutral-300 text-md mb-2">While working on the keyring, I also want to clean up the login code.</p>
+
+                <p class="text-neutral-300 text-md mb-8">At the moment, some of the login functionality is more intertwined than I’d like, so I’m going to split it into smaller helper functions. This will include things like loading the currently saved account data and saving new account data.</p>
+
+                <p class="text-neutral-300 text-lg mb-8">So, the plan for this week is to get the mobile checks in place, add the Android keyring, and make the login code a little easier to work with.</p>
+
+                <p class="text-neutral-300 text-lg mb-2">If you are interested in meteorite, contributions are always (very) welcome!</p>
+                <p class="text-neutral-300 text-lg mb-2">That's all for this week. See you next week!</p>
+            </Entry>
+        </div>
+        <Footer />
+    </main>
+</Layout>
