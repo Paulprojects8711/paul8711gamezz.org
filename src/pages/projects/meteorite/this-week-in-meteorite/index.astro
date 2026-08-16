@@ -35,6 +35,25 @@ import Layout from "../../../../layouts/Layout.astro";
                 <p class="text-neutral-300 text-lg mb-2">If you are interested in meteorite, contributions are always (very) welcome!</p>
                 <p class="text-neutral-300 text-lg mb-2">That's all for this week. See you next week!</p>
             </Entry>
+
+            <Entry title="Yet another UI refactor - TWIm #2" date="2026-08-16">
+                <p class="text-neutral-300 text-md mb-2">This week, I will focus on cleaning up meteorite's UI code.</p>
+
+                <p class="text-neutral-300 text-md mb-2">Last week I added everything I talked about and a few more things, which I mostly found out about via the new CI Checks.</p>
+                <p class="text-neutral-300 text-md mb-2">For example I removed a crate used to previously display errors before the UI started. I isolated the errors that could happen and just passed them into the UI.</p>
+
+                <h1 class="text-neutral-300 text-3xl mb-2">UI cleanup</h1>
+
+                <p class="text-neutral-300 text-md mb-2">The UI currently determines what to display via different states which are manually set.</p>
+
+                <p class="text-neutral-300 text-md mb-8">Instead I would like each different screen (e.g. Login) to be a callable function. This would greatly simplify redirections from the main screen to the login screen and back.</p>
+
+
+                <p class="text-neutral-300 text-md mb-8">The other thing I would like to do is adding a retry button to the error screen. Most errors are recoverable if re-attempted.</p>
+
+                <p class="text-neutral-300 text-lg mb-2">If you are interested in meteorite, contributions are always (very) welcome!</p>
+                <p class="text-neutral-300 text-lg mb-2">That's all for this week. See you next week!</p>
+            </Entry>
         </div>
         <Footer />
     </main>
