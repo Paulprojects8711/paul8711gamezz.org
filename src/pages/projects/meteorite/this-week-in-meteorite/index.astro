@@ -9,7 +9,33 @@ import Layout from "../../../../layouts/Layout.astro";
     <main class="min-h-dvh bg-black bg-linear-120 from-[#00312e] via-transparent to-[#002b00] pt-15 pb-32">
         <Bar title="This Week In meteorite" link="/projects/meteorite" />
         <div class="mt-10 p-4">
-            <!-- TODO: add search bar, method to filter by date -->
+            <Entry title="OAuth Login and access tokens - TWIm #4" date="2026-09-06">
+                <p class="text-neutral-300 text-md mb-2">Next week I finally want to wrap up logging in by adding the option to login with OAuth.</p>
+
+                <p class="text-neutral-300 text-md mb-2">Last week I didn't write an entry as I wanted to focus on other things, but I ended up learning more about OAuth with Matrix.</p>
+
+                <h1 class="text-neutral-300 text-3xl mb-2">OAuth Login</h1>
+
+                <p class="text-neutral-300 text-md mb-2">Everything except this (IdPs are also missing but we will get to that later) is already implemented.</p>
+                <p class="text-neutral-300 text-md mb-2">There are two options to login: 1) Scanning a QR code or 2) Authorization Code flow.</p>
+                <p class="text-neutral-300 text-md mb-2">Authorization Code flow requires to open a URL where the user can log into their account.</p>
+                <p class="text-neutral-300 text-md mb-2">When using the first option, the device is already marked as verified.</p>
+
+                <h1 class="text-neutral-300 text-3xl mb-2">Identity providers</h1>
+
+                <p class="text-neutral-300 text-md mb-2">A user can also login with an identity provider of choice (if supported by his homeserver).</p>
+                <p class="text-neutral-300 text-md mb-2">Examples of IdPs: Google, Github, Apple, etc.</p>
+                <p class="text-neutral-300 text-mb mb-2">Adding these login options is also a goal for this week, but it might reschedule it for next week if time gets tight.</p>
+
+                <h1 class="text-neutral-300 text-3xl mb-2">Refreshing access tokens</h1>
+
+                <p class="text-neutral-300 text-md mb-2">This has been on the todo list for a long time (because I was unsure how I should do it).</p>
+                <p class="text-neutral-300 text-md mb-8">I was finally able to figure it out, thanks to the helpful community behind the Matrix Rust SDK.</p>
+
+                <p class="text-neutral-300 text-md mb-8">If I am unable to implement one of the things this week I will do so next week.</p>
+
+                <p class="text-neutral-300 text-md mb-2">And as always, contributions are always welcome!</p>
+            </Entry>
             <Entry title="Login methods - TWIm #3" date="2026-08-23">
                 <p class="text-neutral-300 text-md mb-2">In the coming week, I will finally focus on more options to login.</p>
 
