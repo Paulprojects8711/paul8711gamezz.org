@@ -20,7 +20,7 @@
     "homepage": "https://github.com/vektrace/vektrace.com#readme",
     "dependencies": {
         "@tailwindcss/vite": "^4.3.3",
-        "astro": "^7.3.0",
+        "astro": "^7.3.1",
         "tailwindcss": "^4.3.2"
     },
     "devDependencies": {
