@@ -10,8 +10,3 @@ updates:
       prefix: "fix"
       prefix-development: "chore"
       include: "scope"
-    
-    groups:
-      all-npm-dependencies:
-        patterns:
-          - "*"
